@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,12 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				chatbot: {
+					primary: '#4f46e5',
+					secondary: '#818cf8',
+					accent: '#c7d2fe',
+					background: '#f5f7ff'
 				}
 			},
 			borderRadius: {
@@ -84,11 +91,41 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-slow': {
+					'0%, 100%': {
+						opacity: '1'
+					},
+					'50%': {
+						opacity: '0.5'
+					}
+				},
+				'bounce-slow': {
+					'0%, 100%': {
+						transform: 'translateY(-5%)',
+						animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)'
+					},
+					'50%': {
+						transform: 'translateY(0)',
+						animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)'
+					}
+				},
+				'wave': {
+					'0%': { transform: 'scaleY(0.5)' },
+					'50%': { transform: 'scaleY(1.0)' },
+					'100%': { transform: 'scaleY(0.5)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-slow': 'pulse-slow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+				'bounce-slow': 'bounce-slow 2s infinite',
+				'wave-1': 'wave 1.2s linear infinite',
+				'wave-2': 'wave 1.2s linear infinite .15s',
+				'wave-3': 'wave 1.2s linear infinite .3s',
+				'wave-4': 'wave 1.2s linear infinite .45s',
+				'wave-5': 'wave 1.2s linear infinite .6s',
 			}
 		}
 	},
