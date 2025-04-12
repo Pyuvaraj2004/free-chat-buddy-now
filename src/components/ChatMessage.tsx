@@ -31,7 +31,7 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
       )}
       <div 
         className={cn(
-          "rounded-2xl p-4",
+          "rounded-2xl p-4 whitespace-pre-wrap break-words",
           isBot 
             ? "bg-white border border-gray-200 shadow-sm text-left" 
             : "bg-chatbot-primary text-white"
